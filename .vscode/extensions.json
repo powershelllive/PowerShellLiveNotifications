@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "ms-azuretools.vscode-azurefunctions",
+    "ms-dotnettools.csharp",
+    "streetsidesoftware.code-spell-checker",
+    "aaron-bond.better-comments",
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "coenraads.bracket-pair-colorizer",
+    "ms-vscode.powershell",
+    "ryanluker.vscode-coverage-gutters"
+  ]
+}

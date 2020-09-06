@@ -2,3 +2,4 @@
 
 + [TwitchLib Notes](twitchlibnotes.md)
 + [Design](design.md)
++ [Azure Functions](azurefunctions.md)
