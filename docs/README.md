@@ -1,5 +1,6 @@
 # PowerShell Live Notifications Documentation
 
-+ [TwitchLib Notes](twitchlibnotes.md)
-+ [Design](design.md)
-+ [Azure Functions](azurefunctions.md)
++ [TwitchLib Notes](TwitchLibNotes.md)
++ [Design](Design.md)
++ [Azure Functions](AzureFunctions.md)
++ [Dependency Injection](DependencyInjection.md)
