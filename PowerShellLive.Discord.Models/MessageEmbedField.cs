@@ -3,6 +3,10 @@ using PowerShellLive.Discord.Interfaces;
 
 namespace PowerShellLive.Discord.Models
 {
+    /// <summary>
+    /// Additional fields to add to an embed.
+    /// See <see href="https://discord.com/developers/docs/resources/channel#embed-object-embed-field-structure"/>.
+    /// </summary>
     public class MessageEmbedField : IMessageEmbedField
     {
         [JsonPropertyName("name")]
@@ -14,6 +18,9 @@ namespace PowerShellLive.Discord.Models
         [JsonPropertyName("inline")]
         public bool IsInline { get; set; }
 
+        /// <summary>
+        /// Creates a <see cref="MessageEmbedField"/>.
+        /// </summary>
         public MessageEmbedField(){}
     }
 }

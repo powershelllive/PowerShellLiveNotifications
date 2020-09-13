@@ -12,6 +12,13 @@ using PowerShellLive.Discord.Models;
 
 namespace PowerShellLive.Discord
 {
+    /// <summary>
+    /// Discord Webhook service.
+    /// Used to send messages to Discord webhooks.
+    /// This services is intended to be used by dependency injection.
+    /// See <see href="https://discord.com/developers/docs/resources/webhook"/>.
+    /// </summary>
+    /// <seealso cref="IWebhookService{TMessageEmbedType}"/>
     public class WebhookService : IWebhookService<MessageEmbedType>
     {
         private HttpClient _httpClient;
@@ -20,6 +27,12 @@ namespace PowerShellLive.Discord
 
         private JsonSerializerOptions jsonOptions;
 
+        /// <summary>
+        /// Creates a <see cref="WebhookService"/>.
+        /// </summary>
+        /// <param name="httpClient">A <see cref="HttpClient"/> used for sending messages to a Discord Webhook.</param>
+        /// <param name="logger">An <see cref="ILogger{TCategoryName}"/> used for logging operations.</param>
+        /// <param name="config"> An <see cref="IOptions{TOptions}"/> of <see cref="WebhookOptions"/> used to configure the webhook service.</param>
         public WebhookService(
             HttpClient httpClient,
             ILogger<WebhookService> logger,
@@ -36,6 +49,7 @@ namespace PowerShellLive.Discord
             };
             jsonOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase));
         }
+
         public async Task<IWebhookResult<MessageEmbedType>> SendMessageAsync(IWebhookMessage<MessageEmbedType> Message)
         {
             var httpMessageBody = JsonSerializer.Serialize(Message, jsonOptions);

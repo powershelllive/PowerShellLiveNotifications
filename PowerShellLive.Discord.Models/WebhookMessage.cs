@@ -4,6 +4,11 @@ using PowerShellLive.Discord.Interfaces;
 
 namespace PowerShellLive.Discord.Models
 {
+    /// <summary>
+    /// Message to send to Discord Webhook.
+    /// Represents a message sent in a channel within Discord.
+    /// See <see href="https://discord.com/developers/docs/resources/webhook#execute-webhook-jsonform-params"/>.
+    /// </summary>
     public class WebhookMessage : IWebhookMessage<MessageEmbedType>
     {
         [JsonPropertyName("content")]
@@ -12,6 +17,9 @@ namespace PowerShellLive.Discord.Models
         [JsonPropertyName("embeds")]
         public IList<IMessageEmbed<MessageEmbedType>> Embeds { get; set; }
 
+        /// <summary>
+        /// Creates a <see cref="WebhookMessage"/>.
+        /// </summary>
         public WebhookMessage(){}
     }
 }

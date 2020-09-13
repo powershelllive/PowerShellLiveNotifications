@@ -5,6 +5,10 @@ using PowerShellLive.Discord.Interfaces;
 
 namespace PowerShellLive.Discord.Models
 {
+    /// <summary>
+    /// A Discord webhook message embed.
+    /// See <see href="https://discord.com/developers/docs/resources/channel#embed-object"/>
+    /// </summary>
     public class MessageEmbed: IMessageEmbed<MessageEmbedType>
     {
         [JsonPropertyName("title")]
@@ -46,6 +50,9 @@ namespace PowerShellLive.Discord.Models
         [JsonPropertyName("fields")]
         public IList<IMessageEmbedField> Fields { get; set; }
 
+        /// <summary>
+        /// Creates a <see cref="MessageEmbed"/>.
+        /// </summary>
         public MessageEmbed(){}
     }
 }
