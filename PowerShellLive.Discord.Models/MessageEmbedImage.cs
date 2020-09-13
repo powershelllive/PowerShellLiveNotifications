@@ -3,6 +3,11 @@ using PowerShellLive.Discord.Interfaces;
 
 namespace PowerShellLive.Discord.Models
 {
+    /// <summary>
+    /// Image to display in the Embed.
+    /// When submitting to a webhook, only the <c>Url</c> is required.
+    /// See <see href="https://discord.com/developers/docs/resources/channel#embed-object-embed-image-structure"/>.
+    /// </summary>
     public class MessageEmbedImage : IMessageEmbedImage
     {
         [JsonPropertyName("url")]
@@ -17,6 +22,9 @@ namespace PowerShellLive.Discord.Models
         [JsonPropertyName("width")]
         public int Width { get; set; }
 
+        /// <summary>
+        /// Creates a <see cref="MessageEmbedImage"/>.
+        /// </summary>
         public MessageEmbedImage(){}
     }
 }

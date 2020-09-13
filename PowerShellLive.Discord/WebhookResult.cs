@@ -4,6 +4,9 @@ using PowerShellLive.Discord.Models;
 
 namespace PowerShellLive.Discord
 {
+    /// <summary>
+    /// Result from a webhook execution.
+    /// </summary>
     public class WebhookResult : IWebhookResult<MessageEmbedType>
     {
         public IWebhookOptions WebhookOptions { get; set; }
@@ -12,6 +15,9 @@ namespace PowerShellLive.Discord
         public string ResponseBody { get; set; }
         public bool IsSuccess { get; set; }
 
+        /// <summary>
+        /// Creates a <see cref="WebhookResult"/>.
+        /// </summary>
         public WebhookResult(){}
 
     }
